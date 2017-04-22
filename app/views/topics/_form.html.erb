@@ -11,17 +11,34 @@
     </div>
   <% end %>
 
-  <div class="field">
+<div class="row">
+  <div class="field form-group col-md-4">
     <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class: 'form-control' %>
   </div>
+</div>
 
-  <div class="field">
-    <%= f.label :description %>
-    <%= f.text_area :description %>
+<div class="row">
+  <div class="col-md-4">
+    <div class="field form-group">
+      <%= f.label :lat %>
+      <%= f.text_field :lat, class: 'form-control' %>
+    </div>
+    <div class="field form-group">
+      <%= f.label :lng %>
+      <%= f.text_field :lng, class: 'form-control' %>
+    </div>
   </div>
+</div>
+
+<div class="row">
+  <div class="field form-group col-md-4">
+    <%= f.label :description %>
+    <%= f.text_area :description, rows: 10, class: 'form-control' %>
+  </div>
+</div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "submit", class: "btn btn-primary" %>
   </div>
 <% end %>
