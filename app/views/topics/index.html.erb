@@ -23,14 +23,13 @@
           <% end %>
           <%= topic.votes.count %>
         </td>
-        <td><%= topic.lat %></td>
-        <td><%= topic.lng %></td>
+        <td><%= topic.latitude %></td>
+        <td><%= topic.longitude %></td>
         <td><%= link_to 'Delete', topic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
 
 <div class="row">
   <div class="col-md-1">

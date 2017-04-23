@@ -1,23 +1,32 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
+<div class="row">
+<%= static_map_for(@topic) %>
+</div>
+
+<div class="row">
+  <strong class="col-offset-5 col-md-2">Title:</strong>
   <%= @topic.title %>
+</div>
+
+<p>
 </p>
 
 <p>
   <strong>Lat:</strong>
-  <%= @topic.lat %>
+  <%= @topic.latitude %>
 </p>
 <p>
   <strong>Lng:</strong>
-  <%= @topic.lng %>
+  <%= @topic.longitude %>
 </p>
 
 <p>
   <strong>Description:</strong>
   <%= @topic.description %>
 </p>
+
+
 
 <%= link_to 'Edit', edit_topic_path(@topic) %> |
 <%= link_to 'Back', topics_path %>
